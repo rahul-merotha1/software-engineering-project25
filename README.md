@@ -7,7 +7,7 @@ The NITT Examination Portal is a comprehensive web-based application designed to
 
 ### System Overview
 The examination portal operates on a role-based access control (RBAC) model with the following hierarchy:
-![Examination cycle](./admin/public/1 (2).png)
+![Examination cycle](./admin/public/1.png)
 
 1. **Administrators**: Have supreme control over the system
 2. **Teachers**: Can create and manage examinations
