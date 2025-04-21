@@ -7,6 +7,7 @@ The NITT Examination Portal is a comprehensive web-based application designed to
 
 ### System Overview
 The examination portal operates on a role-based access control (RBAC) model with the following hierarchy:
+![Examination cycle](./admin/public/1(2).png)
 
 1. **Administrators**: Have supreme control over the system
 2. **Teachers**: Can create and manage examinations
@@ -64,6 +65,8 @@ graph TD
 - Subject archival instead of deletion
 
 ### 2. Teacher Portal
+
+![Teacher Portal](./admin/public/2.png)
 **Question Bank System**
 - Support for multiple question types:
   - Multiple Choice (Single/Multi-select)
@@ -82,6 +85,9 @@ graph TD
 4. Scheduling and publishing
 
 ### 3. Student Portal
+
+![Student portal](./admin/public/3.png)
+
 **Examination Process**
 1. Test registration with deadline enforcement
 2. Pre-test checklist verification
@@ -116,4 +122,4 @@ graph TD
 | Database | MongoDB | NoSQL data storage |
 | Authentication | JWT | Secure user authentication |
 
-![Admin Dashboard](./admin/public/2.png)
+
