@@ -30,34 +30,18 @@ The examination portal operates on a role-based access control (RBAC) model with
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ## Conceptual Architecture
 
-
-graph TD
-    A[User] --> B{Portal Type}
-    
-    B --> C[Admin Portal]
-    B --> D[Teacher Portal]
-    B --> E[Student Portal]
-    
-    C --> F[User Management]
-    C --> G[Subject Management]
-    C --> H[System Analytics]
-    
-    D --> I[Question Bank]
-    D --> J[Test Creation]
-    D --> K[Result Analysis]
-    
-    E --> L[Test Registration]
-    E --> M[Exam Interface]
-    E --> N[Result Dashboard]
-
+![flow diagram](./admin/public/8.png)
 
 ## Detailed Feature Explanation
 
 ### 1. Admin Portal
+![Admin](./admin/public/9.png)
 **User Management Module**
 - Complete CRUD operations for user accounts
 - Bulk import/export functionality
 - Account status monitoring (active/blocked)
+  
+![Admin](./admin/public/10.png)
 
 **Subject Management**
 - Subject creation with metadata (code, name, credits)
