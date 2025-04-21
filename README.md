@@ -22,26 +22,54 @@ The examination portal operates on a role-based access control (RBAC) model with
 ## System Architecture
 
 ### Frontend Structure
-src/
-├── auth/ # Authentication components
-├── admin/ # Admin portal features
-│ ├── dashboard/ # Statistics and overview
-│ ├── users/ # User management
-│ └── subjects/ # Subject management
-├── teacher/ # Teacher portal
-│ ├── questions/ # Question bank
-│ ├── tests/ # Test creation
-│ └── results/ # Result analysis
-├── student/ # Student portal
-│ ├── dashboard/ # Available tests
-│ ├── tests/ # Test interface
-│ └── results/ # Performance review
-├── shared/ # Common components
-│ ├── layouts/ # Page layouts
-│ ├── ui/ # Reusable UI components
-│ └── utils/ # Utility functions
-└── services/ # API service layer
+# NITT Examination Portal
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![MUI](https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+
+## Project Structure and Implementation
+
+### 🖥️ Frontend Code Structure
+
+```javascript
+// src/App.js - Main Application Entry
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './auth/AuthContext';
+import AdminLayout from './shared/layouts/AdminLayout';
+import TeacherLayout from './shared/layouts/TeacherLayout';
+import StudentLayout from './shared/layouts/StudentLayout';
+
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="users" element={<UserManagement />} />
+            <Route path="subjects" element={<SubjectManagement />} />
+          </Route>
+
+          {/* Teacher Routes */}
+          <Route path="/teacher" element={<TeacherLayout />}>
+            <Route path="questions" element={<QuestionBank />} />
+            <Route path="tests" element={<TestManagement />} />
+            <Route path="results" element={<ResultAnalysis />} />
+          </Route>
+
+          {/* Student Routes */}
+          <Route path="/student" element={<StudentLayout />}>
+            <Route path="dashboard" element={<StudentDashboard />} />
+            <Route path="tests/:id" element={<TestInterface />} />
+            <Route path="results" element={<StudentResults />} />
+          </Route>
+        </Routes>
+      </Router>
+    </AuthProvider>
+  );
+}
 
 ### Backend Services (Conceptual)
 
