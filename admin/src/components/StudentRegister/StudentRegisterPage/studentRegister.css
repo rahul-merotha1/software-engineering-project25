@@ -1,0 +1,46 @@
+.register-wrapper {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .parallax-bg {
+    background-image: url("https://images.unsplash.com/photo-1581091012184-7c2c0fd1f6d9"); /* education-themed image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .register-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .register-subtext {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  

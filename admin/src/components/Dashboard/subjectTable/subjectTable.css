@@ -1,0 +1,71 @@
+/* subjectTable.css */
+
+.main {
+  background-color: #fffaf3;
+  color: #3e2723;
+  padding: 30px 60px;
+  display: inline-block;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #bf360c;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #ffab91;
+  padding-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff3e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+th {
+  background-color: #ffe0b2;
+  color: #4e342e;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #ffccbc;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid #fbe9e7;
+}
+
+tr:nth-child(even) {
+  background-color: #fff8e1;
+}
+
+tr:hover {
+  background-color: #ffe0b2;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #e65100;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #bf360c;
+}

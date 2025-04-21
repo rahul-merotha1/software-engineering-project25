@@ -1,0 +1,72 @@
+/* teacherTable.css */
+
+.main {
+  background-color: #f3f4ff;
+  color: #1a237e;
+  padding: 30px 60px;
+  display: inline-block;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #3f51b5;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #c5cae9;
+  padding-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+th {
+  background-color: #e8eaf6;
+  color: #1a237e;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #c5cae9;
+}
+
+td {
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  color: #3e3e3e;
+  border-bottom: 1px solid #eeeeee;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1fc;
+}
+
+tr:hover {
+  background-color: #e3e4fa;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f51b5;
+}
