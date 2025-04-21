@@ -1,245 +1,138 @@
-<!--
-Hey, thanks for using the awesome-readme-template template.  
-If you have any enhancements, then fork this project and create a pull request 
-or just open an issue with the label "enhancement".
-Don't forget to give this project a star for additional support ;)
-Maybe you can mention me or this repo in the acknowledgements too
--->
-<div align="center">
-  <h1>Online Examination Portal NITT</h1>
-  <p>
-    A Online Examination portal NITT website with backend in Nodejs and frontend in React js 
-  </p>
-  
-<!-- Badges -->
-<p>
-  <a href="https://github.com/chintan-golakiya/online-exam-portal/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/chintan-golakiya/online-exam-portal" alt="contributors" />
-  </a>
-  <a href="">
-    <img src="https://img.shields.io/github/last-commit/chintan-golakiya/online-exam-portal" alt="last update" />
-  </a>
-  <a href="https://github.com/chintan-golakiya/online-exam-portal/network/members">
-    <img src="https://img.shields.io/github/forks/chintan-golakiya/online-exam-portal" alt="forks" />
-  </a>
-  <a href="https://github.com/chintan-golakiya/online-exam-portal/stargazers">
-    <img src="https://img.shields.io/github/stars/chintan-golakiya/online-exam-portal" alt="stars" />
-  </a>
-  <a href="https://github.com/chintan-golakiya/online-exam-portal/issues/">
-    <img src="https://img.shields.io/github/issues/chintan-golakiya/online-exam-portal" alt="open issues" />
-  </a>
-</p>
-   
-<h4>
-    <a href="https://chintan-golakiya.github.io/online-exam-portal-frontend/">View Demo</a>
-  <span> · </span>
-    <a href="https://github.com/chintan-golakiya/online-exam-portal/issues/">Report Bug</a>
-  <span> · </span>
-    <a href="https://github.com/chintan-golakiya/online-exam-portal/issues/">Request Feature</a>
-  </h4>
-</div>
+# NITT Examination Portal System
 
-<br />
+## Introduction
+The NITT Examination Portal is a comprehensive web-based application designed to streamline the examination process for National Institute of Technology, Trichy (NITT). This system provides three distinct interfaces catering to administrators, teachers, and students, facilitating a complete digital examination ecosystem. Built with modern web technologies, the portal ensures secure, efficient, and user-friendly management of all examination-related activities.
 
-<!-- Table of Contents -->
-# :notebook_with_decorative_cover: Table of Contents
+## Theoretical Framework
 
-- [About the Project](#star2-about-the-project)
-  * [Tech Stack](#space_invader-tech-stack)
-  * [Features](#dart-features)
-  * [Environment Variables](#key-environment-variables)
-- [Getting Started](#toolbox-getting-started)
-  * [Prerequisites](#bangbang-prerequisites)
-  * [Run Locally](#running-run-locally)
-  * [Run with Docker](#run-with-docker)
-- [To-do](#notes-to-do)
-- [Contributing](#wave-contributing)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
+### System Overview
+The examination portal operates on a role-based access control (RBAC) model with the following hierarchy:
 
-  
+1. **Administrators**: Have supreme control over the system
+2. **Teachers**: Can create and manage examinations
+3. **Students**: Can take examinations and view results
 
-<!-- About the Project -->
-## :star2: About the Project
-  Web Application for online MCQ test usecase
+### Core Concepts Implemented
+- **Digital Examination Management**: Complete lifecycle from question creation to result publication
+- **Time-bound Testing**: Strict time enforcement for fair examinations
+- **Automated Evaluation**: Immediate result calculation for objective questions
+- **Performance Analytics**: Detailed insights for both students and faculty
+- **Secure Access Control**: Role-based authentication for all operations
+
+## System Architecture
+
+### Frontend Structure
+src/
+├── auth/ # Authentication components
+├── admin/ # Admin portal features
+│ ├── dashboard/ # Statistics and overview
+│ ├── users/ # User management
+│ └── subjects/ # Subject management
+├── teacher/ # Teacher portal
+│ ├── questions/ # Question bank
+│ ├── tests/ # Test creation
+│ └── results/ # Result analysis
+├── student/ # Student portal
+│ ├── dashboard/ # Available tests
+│ ├── tests/ # Test interface
+│ └── results/ # Performance review
+├── shared/ # Common components
+│ ├── layouts/ # Page layouts
+│ ├── ui/ # Reusable UI components
+│ └── utils/ # Utility functions
+└── services/ # API service layer
 
 
-<!-- TechStack -->
-### :space_invader: Tech Stack
+### Backend Services (Conceptual)
 
-<details>
-  <summary>Frontend</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://react-redux.js.org/">React-Redux</a></li>
-    <li><a href="https://www.mui.com">Material UI library</a></li>
-    <li><a href="https://html.com/html5/">HTML 5</a></li>
-    <li><a href="https://www.css3.com/">CSS 3</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Backend</summary>
-  <ul>
-    <li><a href="https://www.nodejs.org">Node.js</a></li>
-    <li><a href="https://www.expressjs.com/">Express.js</a></li>
-    <li><a href="https://www.passportjs.org/">Passport.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
+API/
+├── auth/ # Authentication routes
+├── admin/ # Admin endpoints
+├── teacher/ # Teacher endpoints
+├── student/ # Student endpoints
+├── examinations/ # Test management
+└── results/ # Result processing
 
 
-<!-- Features -->
-### :dart: Features
+## Detailed Feature Explanation
 
-- Student User
-  - View Tests Details
-  - Register for test
-  - Give Test
-  - Check Result and correct answer and explanation for questions
-- Teacher User
-  - Create, Update Questions and Question Banks
-  - Create, View Test
-- Admin User
-  - Create and Manage Teacher users
-  - Create and Manage subjects
+### 1. Admin Portal
+**User Management Module**
+- Complete CRUD operations for user accounts
+- Bulk import/export functionality
+- Account status monitoring (active/blocked)
 
+**Subject Management**
+- Subject creation with metadata (code, name, credits)
+- Teacher-subject assignment system
+- Subject archival instead of deletion
 
-<!-- Env Variables -->
-### :key: Environment Variables
+### 2. Teacher Portal
+**Question Bank System**
+- Support for multiple question types:
+  - Multiple Choice (Single/Multi-select)
+  - True/False
+  - Short Answer
+  - Matching Type
+- Question tagging system:
+  - By difficulty level
+  - By topic/subtopic
+  - By Bloom's taxonomy level
 
-To run this project, you will need to add the following variables to your backend/config.json file
+**Test Creation Workflow**
+1. Test metadata definition (title, duration, instructions)
+2. Question selection interface with filters
+3. Marking scheme configuration
+4. Scheduling and publishing
 
-`mongodb.connectionString`
-`jwt.secret`
+### 3. Student Portal
+**Examination Process**
+1. Test registration with deadline enforcement
+2. Pre-test checklist verification
+3. Timed examination interface with:
+   - Question navigation panel
+   - Time remaining display
+   - Answer flagging system
+4. Auto-submission at time expiration
 
-<!-- Getting Started -->
-## 	:toolbox: Getting Started
+**Result Analysis**
+- Score breakdown by section
+- Correct/incorrect answer review
+- Percentile ranking
+- Historical performance trends
 
-<!-- Prerequisites -->
-### :bangbang: Prerequisites
+## Technology Stack
 
-This project uses MongoDB as database. please install mongodb server in local environment.
+### Frontend
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| UI Framework | React.js | Component-based architecture |
+| Styling | @emotion/react | CSS-in-JS solution |
+| Component Library | @mui/material | Pre-built UI components |
+| State Management | React Context | Global state management |
+| Routing | React Router | Navigation and routing |
 
-<!-- Run Locally -->
-### :running: Run Locally
+### Backend (Suggested)
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| Runtime | Node.js | JavaScript server environment |
+| Framework | Express.js | Web application framework |
+| Database | MongoDB | NoSQL data storage |
+| Authentication | JWT | Secure user authentication |
 
-Clone the project
+graph TD
+    A[Login] --> B[Select 'Create Test']
+    B --> C[Enter Test Details]
+    C --> D[Add Questions]
+    D --> E[Set Timing Parameters]
+    E --> F[Preview Test]
+    F --> G[Publish Test]
 
-```bash
-  git clone https://github.com/chintan-golakiya/online-exam-portal.git
-```
-
-Go to the project directory
-
-```bash
-  cd project-directory
-```
-
-Install dependencies
-
-```bash
-  cd backend
-  npm install
-  cd ../frontend
-  npm install
-  cd ../user-portal-frontend
-  npm install
-```
-
-Start the backend server
-
-```bash
-  cd backend
-  npm start
-```
-
-Start the frontend client for admin
-
-```bash
-  cd frontend
-  npm start
-```
-
-Start the frontend client for teacher/student
-
-```bash
-  cd user-portal-frontend
-  npm start
-```
-
-<b>Note</b> : admin user is created when backend runs first time. default admin (username, password) details are <b>("sysadmin","systemadmin"). addAdminIfNotFound() function of backend/services/admin.js file </b> is for this logic. You can check/modify default admin details from this function.
-
-<!-- Run with Docker -->
-### Run With Docker
-
-build docker images
-
-```bash
-  docker-compose build
-```
-
-Run container and services
-
-```bash
-  docker-compose up
-```
-
-Use following paths 
-
-```bash
-  Backend server : localhost:5000/
-  Admin Frontend : localhost:3100/
-  User  Frontend : localhost:3200/
-```
-
-<!-- To Do -->
-## :notes: to-do
-  <ul>
-  <li> add more features </li>
-  </ul>
- 
-<!-- Contributing -->
-## :wave: Contributing
-
-<a href="https://github.com/chintan-golakiya/online-exam-portal/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=chintan-golakiya/online-exam-portal" />
-</a>
-
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-
-
-
-<!-- License -->
-## :warning: License
-
-Distributed under the no License. 
-
-
-<!-- Contact -->
-## :handshake: Contact
-
-Chintan Golakiya - [@_chint4n_](https://twitter.com/_chint4n_) - golakiyachintan24@gmail.com
-
-Project Link: [https://github.com/chintan-golakiya/online-exam-portal](https://github.com/chintan-golakiya/online-exam-portal)
-
-
-<!-- Acknowledgments -->
-## :gem: Acknowledgements
-Following libraries have been used in this projects.
-
- - [Material UI](https://www.mui.com)
- - [Passport JS](https://www.passportjs.org/)
- - [Awesome Readme Template](https://github.com/Louis3797/awesome-readme-template)
-
+graph TD
+    A[Login] --> B[View Available Tests]
+    B --> C[Register for Test]
+    C --> D[Wait for Test Time]
+    D --> E[Start Test]
+    E --> F[Answer Questions]
+    F --> G[Submit Answers]
+    G --> H[View Results]
