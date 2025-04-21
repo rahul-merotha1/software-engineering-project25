@@ -116,4 +116,4 @@ graph TD
 | Database | MongoDB | NoSQL data storage |
 | Authentication | JWT | Secure user authentication |
 
-![Admin Dashboard](/admin/public/images/2.png)
+![Admin Dashboard](./admin/public/2.png)
