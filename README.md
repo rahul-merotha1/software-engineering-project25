@@ -116,30 +116,4 @@ graph TD
 | Database | MongoDB | NoSQL data storage |
 | Authentication | JWT | Secure user authentication |
 
-graph TD
-    A[Login] --> B[Select 'Create Test']
-    B --> C[Enter Test Details]
-    C --> D[Add Questions]
-    D --> E[Set Timing Parameters]
-    E --> F[Preview Test]
-    F --> G[Publish Test]
-
-graph TD
-    A[Login] --> B[View Available Tests]
-    B --> C[Register for Test]
-    C --> D[Wait for Test Time]
-    D --> E[Start Test]
-    E --> F[Answer Questions]
-    F --> G[Submit Answers]
-    G --> H[View Results]
-
-
-
-sequenceDiagram
-    Admin->>System: Creates Subjects
-    Teacher->>System: Adds Questions
-    Teacher->>System: Schedules Test
-    Student->>System: Registers for Test
-    System->>Student: Takes Test (Timed)
-    System->>All: Publishes Results
-    Student->>System: Views Analytics
+![Admin Dashboard](/admin/public/images/2.png)
