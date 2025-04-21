@@ -132,3 +132,14 @@ graph TD
     E --> F[Answer Questions]
     F --> G[Submit Answers]
     G --> H[View Results]
+
+
+
+sequenceDiagram
+    Admin->>System: Creates Subjects
+    Teacher->>System: Adds Questions
+    Teacher->>System: Schedules Test
+    Student->>System: Registers for Test
+    System->>Student: Takes Test (Timed)
+    System->>All: Publishes Results
+    Student->>System: Views Analytics
