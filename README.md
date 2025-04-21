@@ -27,59 +27,27 @@ The examination portal operates on a role-based access control (RBAC) model with
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![MUI](https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+## Conceptual Architecture
 
-## Project Structure and Implementation
 
-### 🖥️ Frontend Code Structure
-
-```javascript
-// src/App.js - Main Application Entry
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './auth/AuthContext';
-import AdminLayout from './shared/layouts/AdminLayout';
-import TeacherLayout from './shared/layouts/TeacherLayout';
-import StudentLayout from './shared/layouts/StudentLayout';
-
-function App() {
-  return (
-    <AuthProvider>
-      <Router>
-        <Routes>
-          {/* Admin Routes */}
-          <Route path="/admin" element={<AdminLayout />}>
-            <Route path="dashboard" element={<AdminDashboard />} />
-            <Route path="users" element={<UserManagement />} />
-            <Route path="subjects" element={<SubjectManagement />} />
-          </Route>
-
-          {/* Teacher Routes */}
-          <Route path="/teacher" element={<TeacherLayout />}>
-            <Route path="questions" element={<QuestionBank />} />
-            <Route path="tests" element={<TestManagement />} />
-            <Route path="results" element={<ResultAnalysis />} />
-          </Route>
-
-          {/* Student Routes */}
-          <Route path="/student" element={<StudentLayout />}>
-            <Route path="dashboard" element={<StudentDashboard />} />
-            <Route path="tests/:id" element={<TestInterface />} />
-            <Route path="results" element={<StudentResults />} />
-          </Route>
-        </Routes>
-      </Router>
-    </AuthProvider>
-  );
-}
-
-### Backend Services (Conceptual)
-
-API/
-├── auth/ # Authentication routes
-├── admin/ # Admin endpoints
-├── teacher/ # Teacher endpoints
-├── student/ # Student endpoints
-├── examinations/ # Test management
-└── results/ # Result processing
+graph TD
+    A[User] --> B{Portal Type}
+    
+    B --> C[Admin Portal]
+    B --> D[Teacher Portal]
+    B --> E[Student Portal]
+    
+    C --> F[User Management]
+    C --> G[Subject Management]
+    C --> H[System Analytics]
+    
+    D --> I[Question Bank]
+    D --> J[Test Creation]
+    D --> K[Result Analysis]
+    
+    E --> L[Test Registration]
+    E --> M[Exam Interface]
+    E --> N[Result Dashboard]
 
 
 ## Detailed Feature Explanation
