@@ -106,53 +106,77 @@ The examination portal operates on a role-based access control (RBAC) model with
 | Database | MongoDB | NoSQL data storage |
 | Authentication | JWT | Secure user authentication |
 
-#WEBSITE OVERVIEW
-##SYSTEM ADMIN
-###Admin login
+# WEBSITE OVERVIEW
+## SYSTEM ADMIN
+### Admin login
 
 ![admin login](./teacher-student/public/1.png)
 
-###Admin Dashboard
+### Admin Dashboard
 
 ![Admin Dashboard](./teacher-student/public/2.png)
 
-###Add teacher
-![Add teacher](./teacher-student/public/addtech.png)
 
-###Add Subject
+### Add teacher
+
+![Add teacher](./teacher-student/public/addteach.png)
+
+
+### Add Subject
 ![Add teacher](./teacher-student/public/addsub.png)
 
-###All Subject
+### All Subject
+
 ![All teacher](./teacher-student/public/showsub.png)
 
-###User Login
+
+### User Login
+
 ![User login](./teacher-student/public/userlog.png)
 
-###Teacher Dashboard
+
+### Teacher Dashboard
+ 
 ![Teacher Dashboard](./teacher-student/public/teachdash.png)
 
-###Add Question
+
+### Add Question
+
 ![add question](./teacher-student/public/addque.png)
 
-###Create Test
+
+### Create Test
+
 ![create test](./teacher-student/public/createtst.png)
 
-###Teacher Dashboard
+
+### Teacher Dashboard
+
 ![Teacher Dashboard](./teacher-student/public/teachdash.png)
 
-###Student Registration
+
+### Student Registration
+
 ![student register](./teacher-student/public/stdreg.png)
 
-###Student Dashboard
+
+### Student Dashboard
+
 ![stduent Dashboard](./teacher-student/public/stdash.png)
 
-###View and Register for Test
+
+### View and Register for Test
+
 ![viewTest](https://github.com/user-attachments/assets/eb12af16-937c-4e30-9d41-b98f74306ad4)
 
-###Test Live
+
+### Test Live
+
 ![Test live](./teacher-student/public/testlive.png)
 
-###Review Test
+
+### Review Test
+
 ![review test](./teacher-student/public/cmplttst.png)
 
 
